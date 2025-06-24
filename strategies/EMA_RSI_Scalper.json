@@ -1,0 +1,14 @@
+{
+    "strategy_name": "EMA_RSI_Scalper",
+    "style": "momentum",
+    "indicators": [
+        "EMA (10)",
+        "EMA (20)",
+        "RSI (14)"
+    ],
+    "entry": "Long: 10-period EMA crosses above 20-period EMA AND RSI > 30. Short: 10-period EMA crosses below 20-period EMA AND RSI < 70.",
+    "exit": "Trailing stop-loss (e.g., 0.5% below/above recent swing low/high) and take-profit (e.g., 0.5% from entry price).",
+    "stop_loss": "Trailing stop-loss based on recent swing low/high or fixed percentage (e.g., 1%) below/above entry price.",
+    "take_profit": "Fixed percentage gain (e.g., 0.5%) from entry price.",
+    "timeframe": "5m"
+}

@@ -1,0 +1,40 @@
+Great—before building out these agents end-to-end, I need to nail down a few specifics. I’ll keep asking until I’m about 95% confident:
+
+Data Provisioning
+a. Which tickers (or universe) do you want to support? Single symbol or many?
+b. Exact bar size(s) (5 min, 1 min, multi-scale)?
+c. Regular Trading Hours only, or include pre-/post-market?
+d. Any special events to prioritize (earnings, macro releases)?
+
+RL Framework & Environment
+a. Which library do you prefer for DQN? (e.g. stable-baselines3, RLlib, custom PyTorch)
+b. How should we define the Gym-style environment?
+
+Observation space (raw OHLCV, technical features?)
+
+Action space (Buy/Hold/Sell discrete)?
+
+Reward function (PnL per bar? Sharpe? custom)?
+c. Warm-up logic for indicator initialization (how many bars)?
+
+Training & Testing Code Generator
+a. Do you want a script or Jupyter notebook template?
+b. Hyperparameters to expose (learning rate, epsilon schedule, batch size, etc.)?
+c. Where should models be saved/loaded (file paths, naming)?
+
+Backtesting Agent
+a. Should backtests use the same Gym env or Backtrader?
+b. Key metrics to report (Sharpe, drawdown, win-rate)?
+c. Plotting/visualization requirements?
+
+Live-Trading Code Generator
+a. What integration library for IBKR? (ib_insync, native API, etc.)
+b. Execution logic: send market orders vs. limit?
+c. Risk checks (max position size, daily loss limit)?
+
+Trader Agent
+a. Connection details: TWS vs. IB Gateway, host/port, account.
+b. Frequency of inference (every bar, event-driven, …).
+c. Logging/monitoring (alerts, dashboards)?
+
+Could you please clarify these points? Feel free to answer in any order or add anything I’ve missed.

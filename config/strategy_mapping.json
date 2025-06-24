@@ -1,0 +1,49 @@
+{
+  "golden cross": {
+    "code": "../strategies/golden_cross.py",
+    "params": {
+      "sma_short": 50,
+      "sma_long": 200,
+      "rsi_period": 14,
+      "profit_target_pct": 100.0,
+      "stop_loss_pct": 33.0
+    }
+  },
+  "reverse probability": {
+    "code": "../strategies/reverse_probability.py",
+    "params": {
+      "mac_hist": 50,
+      "volume": 200,
+      "rsi_period": 14,
+      "profit_target_pct": 100.0,
+      "stop_loss_pct": 33.0
+    }
+  },
+  "simple eval": {
+    "code": "../strategies/simple_evaluate.py",
+    "params": {
+      "sma_short": 50,
+      "sma_long": 200,
+      "rsi_period": 14,
+      "profit_target_pct": 100.0,
+      "stop_loss_pct": 33.0
+    }
+  },
+  "momentum breakout": {
+    "code": "../strategies/MomentumBreakout.py",
+    "params": {
+      "sma_short": 50,
+      "sma_long": 200,
+      "rsi_period": 14,
+      "stop_loss_pct": 1.0,
+      "take_profit_pct": 2.0
+    }
+  },
+  "default": {
+    "code": "../strategies/BasicStrategy.py",
+    "params": {
+      "rsi_period": 14,
+      "sma_period": 50
+    }
+  }
+}

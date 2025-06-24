@@ -1,0 +1,54 @@
+1. Objectives → Customized Universes
+Rather than one catch-all universe, build objective-specific watchlists:
+	Momentum: ultra-liquid tech names with proven pre/post-market activity (AAPL, MSFT, NVDA, SPY, QQQ).
+	Mean Reversion: liquid large-caps that regularly “overshoot” intraday (crowded names but consistent liquidity).
+	Reversal Detection: event-driven names around earnings or macro shocks.
+
+Key insight: The watchlist itself is a parameter—your “Data Agent” dynamically curates tickers per objective (and filters out low-volume/halt-prone issues).
+
+2. Time Domain → Extended & Continuous
+Top‐tier quants don’t stop at 9:30–16:00. They treat the clock like a continuum:
+	4 AM–8 PM US/Eastern captures the full wave of overnight news, Asia/Europe spill-over and U.S. pre-/post-market surges.
+	5-minute bars strike the balance between granularity and noise—but you can layer longer (15m, 30m) or shorter (1m) aggregates for multi-scale signals.
+
+Key insight: Time‐window selection is strategic: align your bar-generation pipeline to each objective’s “sweet spot” (e.g. first 30 min momentum vs. late-day mean reversion).
+
+3. Event Tagging → Contextual Sampling
+Data isn’t just timestamped—it’s annotated:
+
+	Earnings seasons (AAPL, MSFT, NVDA) marked so your model “knows” which bars surround big reports.
+	Macro days (FOMC, CPI, Jobs) flagged to isolate regime-shifts versus normal drift.
+	High VIX periods tagged for heightened volatility training.
+
+Key insight: Embed an Event Calendar into your provisioning pipeline so your agent can oversample or hold out whole “event episodes” for testing.
+
+4. Split Strategy → Leakage-Proof Training/Test
+Your agent doesn’t simply slice dates 80/20:
+
+	Warm-up buffers: 3–5 “burn-in” days before test windows to initialize indicators.
+	Non-overlapping regimes: ensure test spans bull, bear, high-volatility so performance is robust, not overfit.
+
+Key insight: Think of your data splits as regime experiments, not random draws.
+
+5. Pipeline Constraints & Quality Checks
+IBKR limits: cap to 30 days of 5-min bars per request—so your agent loops requests smartly.
+
+	Completeness tests: reject symbols/windows with > X% missing candles or zero-volume spikes.
+	Time-zone sanity: enforce US/Eastern alignment.
+
+Key insight: Inject automated QC gates into the pipeline so only clean, compliant data ever reaches your DQN trainer.
+
+
+
+
+The New “Data Agent” Mission
+Your Data Agent is a strategist that:
+
+Picks the right universe for each objective.
+Assembles continuous, extended-hours 5-min bars.
+Tags and samples around key events.
+Splits data by regime with warm-up buffers.
+Validates completeness under IBKR’s constraints.
+
+
+By elevating data provisioning to a multi-dimensional design problem, you turn raw quotes into purpose-built inputs—and give your DQN the best possible training ground.

@@ -1,0 +1,4 @@
+# TODO (for next session)
+- Continue from EventTagger.tag_events (yfinance version working)
+- Next: Add Polygon.io support for event tagging
+- Last tested: <date>

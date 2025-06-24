@@ -1,0 +1,13 @@
+{
+  "strategy_name": "EMA_RSI_Scalper",
+  "style": "momentum",
+  "indicators": [
+    "9-period EMA",
+    "RSI (14)"
+  ],
+  "entry": "Long: Price crosses above 9-period EMA and RSI < 30; Short: Price crosses below 9-period EMA and RSI > 70",
+  "exit": "Long: Price crosses below 9-period EMA; Short: Price crosses above 9-period EMA;  Alternative: Trailing Stop Loss",
+  "stop_loss": "Fixed percentage or price level below/above entry price",
+  "take_profit": "Fixed percentage or price level above/below entry price",
+  "timeframe": "5m"
+}

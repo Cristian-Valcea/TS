@@ -1,0 +1,10 @@
+# Build results
+bin/
+obj/
+venv/
+.vs/
+.vscode/
+_pycache_/
+
+# Others
+*.log
